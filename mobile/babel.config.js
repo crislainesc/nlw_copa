@@ -13,6 +13,8 @@ module.exports = function (api) {
             '@/components': './src/components',
             '@/screens': './src/screens',
             '@/styles': './src/styles',
+            '@/hooks': './src/hooks',
+            '@/contexts': './src/contexts',
           },
         },
       ],
