@@ -3,7 +3,7 @@ import { Octicons } from '@expo/vector-icons'
 
 import { Button, Header } from '@/components'
 
-export function Polls() {
+export function Polls({ navigation }) {
   return (
     <VStack flex={1} bgColor="gray.900">
       <Header title="Meus bolões" />
@@ -21,6 +21,7 @@ export function Polls() {
           leftIcon={
             <Icon as={Octicons} name="search" color="black" size="md" />
           }
+          onPress={() => navigation.navigate('find')}
         />
       </VStack>
     </VStack>

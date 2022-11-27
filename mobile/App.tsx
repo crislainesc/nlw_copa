@@ -8,8 +8,8 @@ import {
 
 import { Loading } from '@/components'
 import { AuthContextProvider } from '@/contexts'
-import { SignIn } from '@/screens'
 import { THEME } from '@/styles'
+import { Routes } from '@/routes/index.routes'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +26,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   )
