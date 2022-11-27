@@ -26,7 +26,7 @@
 
 ### 📖 About the project
 
-xt Level Week is an event on the Rocketseat educational platform to develop an unprecedented project and learn new skills and technology. During the event, the web and mobile version of 'Bolão da Copa' was developed, an application to participate in the 2022 World Cup polls.
+Next Level Week is an event on the Rocketseat educational platform to develop an unprecedented project and learn new skills and technology. During the event, the web and mobile version of 'Bolão da Copa' was developed, an application to participate in the 2022 World Cup polls.
 ### ✨ Features
 
 - Landing page using React JS
