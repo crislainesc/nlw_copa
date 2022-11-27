@@ -9,11 +9,11 @@ export async function gameRoutes(fastify: FastifyInstance) {
     '/polls/:id/games',
     { onRequest: [authenticate] },
     async (request: FastifyRequest) => {
-      const gerPollParams = z.object({
+      const getPollParams = z.object({
         id: z.string(),
       })
 
-      const { id } = gerPollParams.parse(request.body)
+      const { id } = getPollParams.parse(request.params)
 
       const games = await prisma.game.findMany({
         orderBy: { date: 'desc' },
