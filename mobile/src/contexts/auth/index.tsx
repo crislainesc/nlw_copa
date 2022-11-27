@@ -28,7 +28,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<UserProps>({} as UserProps)
   const [isUserLoading, setIsUserLoading] = useState(false)
 
-  const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
+  const [request, response, promptAsync] = Google.useAuthRequest({
     clientId: GOOGLE_CLIENT_ID,
     redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
     scopes: ['profile', 'email'],
@@ -52,8 +52,8 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
   }
 
   useEffect(() => {
-    if (response?.type === 'success' && response.params?.id_token) {
-      signInWithGoogle(response.params?.id_token)
+    if (response?.type === 'success' && response.authentication?.accessToken) {
+      signInWithGoogle(response.authentication?.accessToken)
     }
   }, [response])
 
